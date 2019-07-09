@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://tut/Mob.tscn" type="PackedScene" id=2]
+[ext_resource path="res://MobPlant.tscn" type="PackedScene" id=3]
+[ext_resource path="res://MobCarnivore.tscn" type="PackedScene" id=4]
+[ext_resource path="res://MobHerbivore.tscn" type="PackedScene" id=5]
+
+[node name="Main" type="Node2D"]
+position = Vector2( -10, -20 )
+script = ExtResource( 1 )
+Mob = ExtResource( 2 )
+
+[node name="StartPosition" type="Position2D" parent="."]
+visible = false
+position = Vector2( 240, 450 )
+
+[node name="MobPlant" parent="." instance=ExtResource( 3 )]
+position = Vector2( 118, 657 )
+
+[node name="MobPlant2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 420, 100 )
+
+[node name="MobCarnivore" parent="." instance=ExtResource( 4 )]
+position = Vector2( 424, 484 )
+
+[node name="MobHerbivore" parent="." instance=ExtResource( 5 )]
+position = Vector2( 173, 212 )
+
+[node name="MobHerbivore2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 100, 518 )
